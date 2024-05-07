@@ -1,8 +1,4 @@
-import { GridPostList, Loader } from '@/components/shared';
-import SearchResults from '@/components/shared/SearchResults';
 import { Input } from '@/components/ui';
-import useDebounce from '@/hooks/useDebounce';
-import { useSearchPosts } from '@/lib/react-query/queriesAndMutations';
 import { useState } from 'react'
 
 
