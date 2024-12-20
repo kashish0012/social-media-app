@@ -1,30 +1,7 @@
-# React + TypeScript + Vite
+# Social Media Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application is created with React + Vite using Typescript, Appwrite, TypeScript, Tailwind CSS for a stunning UI, and many more.
 
-Currently, two official plugins are available:
+This application allows you to sign up and create an account then after signing in you can see the Home Page where all the posts from different users will be there. You can also create a post by adding an image, caption, location, and tags, that image will be displayed on the Home Page. You can also save any Posts, Like Post, and many more.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+There is also a beautiful profile page as well where you can see  all the posts added by you and the total count, also you can see all the saved and liked posts as well. In the profile section, you can edit your profile as well by adding the bio section, uploading your profile picture, and updating your name as well. The Posts can also be edited and deleted by the user.
