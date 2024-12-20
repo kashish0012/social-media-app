@@ -10,10 +10,12 @@ import Loader from "@/components/shared/Loader";
 import { useToast } from "@/components/ui/use-toast"
 import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queriesAndMutations"
 import { useUserContext } from "@/context/AuthContext"
+import { useState } from "react"
 
 const SignupForm = () => {
   const { toast } = useToast();
   const { checkAuthUser, isLoading: isUserLoading} = useUserContext();
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
    //Define form.
@@ -115,7 +117,33 @@ const SignupForm = () => {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input type="password" className="shad-input" {...field} />
+                  <div className="relative">
+                    <Input
+                      type={showPassword ? "text" : "password"}
+                      className="shad-input"
+                      {...field}
+                    />
+                    <span
+                      className="absolute inset-y-0 right-2 flex items-center cursor-pointer"
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {showPassword ? (
+                        <img
+                          src="/assets/icons/eye-open.svg"
+                          alt="Hide password"
+                          width={20}
+                          height={20}
+                        />
+                      ) : (
+                        <img
+                          src="/assets/icons/eye-closed.svg"
+                          alt="Show password"
+                          width={20}
+                          height={20}
+                        />
+                      )}
+                    </span>
+                  </div>
                 </FormControl>
                 <FormMessage />
               </FormItem>
